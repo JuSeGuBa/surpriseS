@@ -2,11 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="heart.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Mi Reina Hermosa 👑❤️‍🩹</title>
+    <script>
+      let titleText = "Mi Reina Hermosa 👑";
+      let position = 0;
+
+      function scrollTitle() {
+        document.title =
+          titleText.substring(position) +
+          " " +
+          titleText.substring(0, position);
+        position = (position + 1) % titleText.length;
+        setTimeout(scrollTitle, 400);
+      }
+
+      scrollTitle();
+    </script>
   </head>
   <body>
+    <video autoplay loop muted playsinline id="video-background">
+      <source src="/fondo/fondoS.mp4" type="video/mp4" />
+    </video>
+
+    <button id="activar-sonido">Activar sonido</button>
+
+    <script>
+  const video = document.getElementById("video-background");
+  const boton = document.getElementById("activar-sonido");
+
+  boton.addEventListener("click", () => {
+    video.muted = false;
+    video.volume = 0.05;
+    video.play();
+    boton.style.display = "none";
+  });
+</script>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
