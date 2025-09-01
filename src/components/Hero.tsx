@@ -1,11 +1,31 @@
+import "../styles/hero.css";
+
 const Hero = () => {
   return (
-    <section className="mb-16">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4 text-pink-600">
-        Para ti, mi amor eterno ❤️
-      </h1>
-      <p className="text-lg text-gray-600">
-        Una página hecha con todo mi código y mi corazón.
+    <section className="mb-16 text-center">
+      <h2
+        className="text-4xl md:text-6xl font-extrabold mb-6 
+        bg-gradient-to-r from-pink-500 via-red-400 to-rose-600 
+        text-transparent bg-clip-text drop-shadow-lg tracking-wide hover-soft"
+      >
+        Mi Bebé Hermosa 👑
+      </h2>
+
+      <p className="max-w-xl mx-auto text-lg md:text-xl text-white leading-relaxed hover-soft">
+        <span className="light">
+          {" "}
+          Desde entonces mi amor es por ti <br /> Porque al mirarte logré
+          descubrir un mundo nuevo <br /> Donde plenamente soy feliz{" "}
+        </span>
+        <br /> Y por eso serás para mí
+        <br />
+        <span
+          className="md:text-5xl font-extrabold  
+          bg-gradient-to-r from-pink-500 via-red-400 to-rose-600 
+          text-transparent bg-clip-text drop-shadow-lg tracking-wide hover-highlight"
+        >
+          Mi Amor Eterno
+        </span>
       </p>
     </section>
   );

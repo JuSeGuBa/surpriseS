@@ -1,0 +1,30 @@
+/* Suavidad general para títulos y párrafos */
+.hover-soft {
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.hover-soft:hover {
+  transform: translateY(-4px);
+}
+
+.light {
+  transform: translateY(-4px);
+  filter: brightness(1.3) drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
+  transition: all 0.4s ease-in-out;
+}
+
+.light:hover {
+  filter: brightness(1.8) drop-shadow(0 0 20px rgb(255, 255, 255));
+}
+
+/* Resaltado romántico con zoom */
+.hover-highlight {
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+}
+
+.hover-highlight:hover {
+  transform: scale(1.2) rotate(-1deg);
+  filter: brightness(1.3) drop-shadow(0 0 12px rgba(255, 105, 180, 0.6));
+}

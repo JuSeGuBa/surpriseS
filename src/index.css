@@ -32,7 +32,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 #video-background {
   position: fixed;
   top: 0;
@@ -42,7 +41,9 @@ body {
   object-fit: contain;
   z-index: -1;
   background: rgb(32, 32, 32);
-  opacity: 0.6;
+  opacity: 0.5;
+
+  filter: grayscale(100%) contrast(1.2) brightness(0.9);
 }
 
 main {
