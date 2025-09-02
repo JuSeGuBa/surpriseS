@@ -58,7 +58,7 @@ h1 {
 #activar-sonido {
   position: absolute;
   top: 20px; /* distancia desde arriba */
-  left: 50%; /* centro horizontal */
+  left: 70%; /* centro horizontal */
   transform: translateX(-50%); /* corrige el centrado */
   z-index: 2; /* por encima del video */
 }
