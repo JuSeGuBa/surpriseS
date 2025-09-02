@@ -7,7 +7,6 @@
   position: relative;
 }
 
-/* Base: centrar el punto de referencia de cada imagen en el centro del contenedor */
 .circle-img {
   position: absolute;
   left: 50%;
@@ -16,20 +15,48 @@
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
+  cursor: pointer;
+  border-radius: 12px; /* por si quieres bordes más suaves */
 }
 
-/* Desplazan cada imagen desde el centro según --r */
+/* Arriba */
 .circle-img.top {
   transform: translate(-50%, -50%) translateY(calc(-1 * var(--r)));
 }
+.circle-img.top:hover {
+  transform: translate(-50%, -50%) translateY(calc(-1 * var(--r))) scale(1.1);
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* halo blanco */
+}
+
+/* Derecha */
 .circle-img.right {
   transform: translate(-50%, -50%) translateX(var(--r));
 }
+.circle-img.right:hover {
+  transform: translate(-50%, -50%) translateX(var(--r)) scale(1.1);
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Abajo */
 .circle-img.bottom {
   transform: translate(-50%, -50%) translateY(var(--r));
 }
+.circle-img.bottom:hover {
+  transform: translate(-50%, -50%) translateY(var(--r)) scale(1.1);
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Izquierda */
 .circle-img.left {
   transform: translate(-50%, -50%) translateX(calc(-1 * var(--r)));
+}
+.circle-img.left:hover {
+  transform: translate(-50%, -50%) translateX(calc(-1 * var(--r))) scale(1.1);
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 /* Responsive: menos radio en pantallas pequeñas */

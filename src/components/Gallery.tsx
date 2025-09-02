@@ -19,7 +19,7 @@ const Gallery = () => {
 
       <div className="relative w-96 h-96 mx-auto">
         <div className="absolute inset-0">
-          <div className="relative w-full h-full gallery-circle">
+          <div className="relative w-full h-full gallery-circle ">
             {/* Mantengo tus clases de posición para que el círculo no se rompa */}
             <img
               src="/asamblea.jpg"
