@@ -11,9 +11,9 @@ function App() {
         <Story />
         <Gallery />
         <Secret />
-        <footer className="mt-12 text-gray-500">
+        {/* <footer className=" text-gray-500">
           <p>Hecho con 💻 + ❤️ para ti</p>
-        </footer>
+        </footer> */}
       </div>
     </main>
   );

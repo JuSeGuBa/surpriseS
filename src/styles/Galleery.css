@@ -1,0 +1,44 @@
+.title-gallery:hover {
+  cursor: pointer;
+}
+/* Ajusta aquí el espacio entre imágenes */
+.gallery-circle {
+  --r: 150px; /* <--- cambia este valor para acercar/alejar las imágenes */
+  position: relative;
+}
+
+/* Base: centrar el punto de referencia de cada imagen en el centro del contenedor */
+.circle-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Desplazan cada imagen desde el centro según --r */
+.circle-img.top {
+  transform: translate(-50%, -50%) translateY(calc(-1 * var(--r)));
+}
+.circle-img.right {
+  transform: translate(-50%, -50%) translateX(var(--r));
+}
+.circle-img.bottom {
+  transform: translate(-50%, -50%) translateY(var(--r));
+}
+.circle-img.left {
+  transform: translate(-50%, -50%) translateX(calc(-1 * var(--r)));
+}
+
+/* Responsive: menos radio en pantallas pequeñas */
+@media (max-width: 640px) {
+  .gallery-circle {
+    --r: 70px;
+  }
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
