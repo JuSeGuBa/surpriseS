@@ -1,9 +1,11 @@
+/* Mantener tus estilos originales intactos */
 .title-gallery:hover {
   cursor: pointer;
 }
+
 /* Ajusta aquí el espacio entre imágenes */
 .gallery-circle {
-  --r: 150px; /* <--- cambia este valor para acercar/alejar las imágenes */
+  --r: 150px;
   position: relative;
 }
 
@@ -16,7 +18,7 @@
     transform 0.25s ease,
     box-shadow 0.25s ease;
   cursor: pointer;
-  border-radius: 12px; /* por si quieres bordes más suaves */
+  border-radius: 12px;
 }
 
 /* Arriba */
@@ -26,7 +28,7 @@
 .circle-img.top:hover {
   transform: translate(-50%, -50%) translateY(calc(-1 * var(--r))) scale(1.1);
   z-index: 10;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* halo blanco */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 /* Derecha */
@@ -60,9 +62,27 @@
 }
 
 /* Responsive: menos radio en pantallas pequeñas */
+@media (max-width: 1024px) {
+  .gallery-circle {
+    --r: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-circle {
+    --r: 90px;
+  }
+}
+
 @media (max-width: 640px) {
   .gallery-circle {
     --r: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-circle {
+    --r: 50px;
   }
 }
 
