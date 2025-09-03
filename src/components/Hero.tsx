@@ -15,7 +15,7 @@ const Hero = () => {
         <span className="light">
           {" "}
           Desde entonces mi amor es por ti <br /> Porque al mirarte logré
-          descubrir un mundo nuevo <br /> Donde plenamente soy felíz{" "}
+          descubrir un mundo nuevo <br /> Donde plenamente soy feliz{" "}
         </span>
         <br /> Y por eso serás para mí
         <br />
