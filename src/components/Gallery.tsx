@@ -10,7 +10,7 @@ const Gallery = () => {
   return (
     <section className="mb-6">
       <h2
-        className="title-gallery text-2xl font-semibold mb-4 
+        className="title-gallery text-2xl font-bold mb-4 
         bg-gradient-to-r from-pink-500 via-red-400 to-rose-600 
         text-transparent bg-clip-text drop-shadow-lg tracking-wide hover-highlight"
       >
@@ -74,7 +74,7 @@ const Gallery = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           {/* overlay opaco (click fuera cierra) */}
           <div
-            className="absolute inset-0 bg-black/40"
+            className="absolute inset-0 bg-black/50"
             onClick={() => setSelectedImage(null)}
           />
 

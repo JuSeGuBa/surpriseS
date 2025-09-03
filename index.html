@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Reina Hermosa 👑❤️‍🩹</title>
     <script>
+      // Efecto del título desplazándose
       let titleText = "Mi Reina Hermosa 👑";
       let position = 0;
 
@@ -22,21 +23,36 @@
     </script>
   </head>
   <body>
-    <video autoplay loop muted playsinline id="video-background">
-      <source src="/fondo/fondoS.mp4" type="video/mp4" />
-    </video>
+    <!-- Audio de fondo -->
+    <audio id="bg-audio" loop>
+      <source src="/audio/song.mp3" type="audio/mpeg" />
+    </audio>
 
-    <button id="activar-sonido">Activar sonido</button>
+    <!-- Botón flotante -->
+    <button
+      id="toggle-audio"
+      class="fixed bottom-5 right-5 p-3 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-700 transition">
+      🔇
+    </button>
 
     <script>
-  const video = document.getElementById("video-background");
-  const boton = document.getElementById("activar-sonido");
+  const audio = document.getElementById("bg-audio");
+  const boton = document.getElementById("toggle-audio");
+
+  let isPlaying = false;
 
   boton.addEventListener("click", () => {
-    video.muted = false;
-    video.volume = 0.05;
-    video.play();
-    boton.style.display = "none";
+    if (!isPlaying) {
+      audio.muted = false;
+      audio.volume = 0.3; // volumen bajito
+      audio.play();
+      boton.textContent = "🔊";
+      isPlaying = true;
+    } else {
+      audio.pause();
+      boton.textContent = "🔇";
+      isPlaying = false;
+    }
   });
 </script>
 

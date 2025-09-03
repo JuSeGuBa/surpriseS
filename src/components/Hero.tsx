@@ -6,7 +6,7 @@ const Hero = () => {
       <h2
         className="text-4xl md:text-6xl font-extrabold mb-6 
         bg-gradient-to-r from-pink-500 via-red-400 to-rose-600 
-        text-transparent bg-clip-text drop-shadow-lg tracking-wide hover-soft"
+        text-transparent bg-clip-text drop-shadow-lg tracking-wide hover-soft hover-highlight"
       >
         Mi Bebé Hermosa 👑
       </h2>
